@@ -12,7 +12,7 @@ const UserForm = ({ getUserInput }) => {
   };
   return (
     <form onSubmit={submitHandler}>
-      <input data-testid ="test-user" type="text" onChange={onChangeHandler} />
+      <input data-testid ="test-user1" type="text" onChange={onChangeHandler} />
       <button type="submit">Add</button>
     </form>
   );

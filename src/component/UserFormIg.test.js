@@ -3,7 +3,7 @@ import App from "../App";
 import { Arr } from "./array"
 
 const testUser = (users) => {
-  const inputElement = screen.getByTestId("test-user");
+  const inputElement = screen.getByTestId("test-user1");
   const buttonElement = screen.getByRole("button", { name: "Add" });
   return users.map((user) => {
     fireEvent.change(inputElement, { target: { value: user } });
@@ -15,7 +15,7 @@ describe("User from and data integration test", () => {
   test("Checking User length", () => {
     render(<App />);
 
-    const inputElement = screen.getByTestId("test-user");
+    const inputElement = screen.getByTestId("test-user1");
     const buttonElement = screen.getByRole("button", { name: "Add" });
 
     testUser(Arr);
