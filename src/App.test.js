@@ -1,8 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe("App element test", () => {
+  test("Heading test", () => {
+    const { getByRole } = render(<App />);
+
+    const headingElement = getByRole("heading");
+
+    expect(headingElement.textContent).toBe("Users Data");
+  })
+})
